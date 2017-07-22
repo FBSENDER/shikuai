@@ -1,0 +1,10 @@
+- title("#{@title}_十块购")
+- head_desc("今日特价专场- #{@title} - 十块购。")
+- keywords(@title)
+- path(@path)
+- h1(@title)
+
+.wrapper
+  = render partial: "m_diyquan/header", locals: {need_sort: false, need_ads: true}
+  = render partial: "m_diyquan/page_js", locals: {path: '/getK9CouponList', pinyin: '', keyword: '', pagesize: 20, sort_type: 0}
+  = render partial: "m_diyquan/shuangpai_list", locals: {coupons: @coupons}

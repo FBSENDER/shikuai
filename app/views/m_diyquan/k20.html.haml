@@ -1,0 +1,10 @@
+- title("天天特价_今日特价")
+- head_desc("今日特价网:天天特价,天天分享热门,人气,火爆的限时限量的特价商品资讯,享受天天特价网9.9包邮!淘购打折天天特价商品,享疯狂特价促销,尽在今日天天特价网!")
+- keywords("天天特价,今日特价,今日特价网,聚划算今日特价")
+- path(@path)
+- h1("天天特价 今日特价")
+
+.wrapper
+  = render partial: "m_diyquan/header", locals: {need_sort: false, need_ads: true}
+  = render partial: "m_diyquan/page_js", locals: {path: '/getK20CouponList', pinyin: '', keyword: '', pagesize: 20, sort_type: 0}
+  = render partial: "m_diyquan/shuangpai_list", locals: {coupons: @coupons}
