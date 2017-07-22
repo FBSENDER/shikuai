@@ -1,12 +1,12 @@
 %p.bread-area
-  %span 内部优惠券：
-  %a{href: "/", title: "爱券网"} 爱券网
+  %span 淘宝优惠券：
+  %a{href: "/", title: "十块购"} 十块购
   - if cate
     %span &nbsp;&nbsp;#{">"}&nbsp;&nbsp;
-    %a{href: "/zhekou/#{URI.encode(cate)}/", title: "#{cate}折扣"} #{cate}
+    %a{href: "/zhekou/#{URI.encode(cate)}/", title: "#{cate}折扣优惠券"} #{cate}
   - if sub_cate
     %span &nbsp;&nbsp;#{">"}&nbsp;&nbsp;
-    %a{href: "/zhekou/#{URI.encode(sub_cate)}/", title: "#{sub_cate}折扣"} #{sub_cate}
+    %a{href: "/zhekou/#{URI.encode(sub_cate)}/", title: "#{sub_cate}折扣优惠券"} #{sub_cate}
   %span &nbsp;&nbsp;#{">"}&nbsp;&nbsp;
   %span #{title}
 
