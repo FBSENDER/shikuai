@@ -4,7 +4,7 @@ FROM shikuai_bundle_docker
 RUN bundle config --global frozen 1
 
 RUN mkdir -p /usr/src/app
-RUN copy -R /usr/src/bundle_dir/bundle /usr/src/app/vendor
+RUN cp -R /usr/src/bundle_dir/bundle /usr/src/app/vendor
 WORKDIR /usr/src/app
 
 COPY . /usr/src/app
