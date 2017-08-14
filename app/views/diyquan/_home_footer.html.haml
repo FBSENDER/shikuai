@@ -5,7 +5,7 @@
         %p.head 友情链接：
         .yl-links
           - links.each do |link|
-            %a{herf: "#{link.url}", target: "_blank"} #{link.anchor}
+            %a{href: "#{link.url}", target: "_blank"} #{link.anchor}
       .logo-slogan
         .qr-code
           %a{href: "/"}
