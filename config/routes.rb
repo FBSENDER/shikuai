@@ -55,6 +55,10 @@ Rails.application.routes.draw do
   get "/9kuai9/", to: "diyquan#k9"
   get "/shikuaigou/", to: "diyquan#k20"
 
+  get "/dianpu/", to: "dianpu#map_s"
+  get "/dianpu/:nick/", to: "dianpu#show"
+  get "/dianpu_buy/:seller_id/", to: "dianpu#buy"
+  
   #html sitemap
   get "/map_k/", to: "diyquan#map_k"
   get "/map_k/:page", to: "diyquan#map_k"
