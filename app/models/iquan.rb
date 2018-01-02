@@ -33,3 +33,7 @@ end
 class CateCollection < ApplicationRecord
   self.table_name = 'iquan_cate_collections'
 end
+
+class SearchResult < ApplicationRecord
+  self.table_name = 'iquan_search_results'
+end
