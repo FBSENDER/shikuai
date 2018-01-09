@@ -24,7 +24,16 @@ class DianpuController < ApplicationController
   end
 
   def map_s
-    @shops = Shop.select(:title, :nick).to_a
+    @page = params[:page].to_i
+    @page = @page == 0 ? 0 : @page - 1
+    @shops = Shop.order("id desc").limit(1000).offset(1000 * @page).select(:title, :nick).to_a
+    not_found if @shops.size.zero?
+    if @page > 0
+      @title = "淘宝天猫旗舰店排行榜_爱券网_第#{@page}页"
+    else
+      @title = "淘宝天猫旗舰店排行榜_爱券网"
+    end
+    @total_page = @page + 20
     @title = "淘宝天猫旗舰店排行榜-女装男装居家数码美妆箱包"
     @h1 = "淘宝天猫旗舰店排行榜"
     @keywords = "天猫旗舰店,淘宝店铺,淘宝店铺大全,淘宝店铺排行榜"
