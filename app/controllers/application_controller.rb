@@ -1,6 +1,7 @@
 require 'net/http'
 require 'iquan'
 require 'zkapi/zk_api'
+require 'zkapi/lanlan_api'
 
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception

@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   root "home#index"
+  get "/saber/detail", to: "home#index"
+  get "/saber/search", to: "home#index"
+  get "/saber/index", to: "home#index"
+
   get "/test/", to: "test#index"
   get "/test/child", to: "test#child"
   get "/article/", to: "article#index"
@@ -38,6 +42,11 @@ Rails.application.routes.draw do
   get "/getHotCouponList", to: "diyquan#get_coupons_hot"
   get "/getK9CouponList", to: "diyquan#get_coupons_k9"
   get "/getK20CouponList", to: "diyquan#get_coupons_k20"
+
+  get "/getLanlanHomeCouponList", to: "diyquan#get_lanlan_coupons_index"
+  get "/getLanlanFenleiCouponList", to: "diyquan#get_lanlan_coupons_fenlei"
+  get "/getLanlanSearchCouponList", to: "diyquan#get_lanlan_coupons_search"
+
   get "/youhui/:id", to: "diyquan#get_coupon_by_id", id: /\d+/
   get "/zk/:id", to: "diyquan#old_zk", id: /\d+/
   get "/buy/:id", to: "diyquan#buy", id: /\d+/
