@@ -4,6 +4,9 @@
       .yl
         %p.head 友情链接：
         .yl-links
+          %a{href: "/", target: "_blank"} 粉丝福利购
+          %a{href: "/", target: "_blank"} 天天特价
+          %a{href: "/", target: "_blank"} 今日特价
           - links.each do |link|
             %a{href: "#{link.url}", target: "_blank"} #{link.anchor}
       .logo-slogan
